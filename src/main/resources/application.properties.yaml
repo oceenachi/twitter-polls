@@ -1,0 +1,28 @@
+## Server properties
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect:  org.hibernate.dialect.MySQL5InnoDBDialect
+  application:
+    name: twitter-polls
+  datasource:
+    url: jdbc:mysql://localhost:3306/twitter-polls??createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
+    username: root
+    password:
+      initialization-mode: always
+  jackson:
+    time-zone: UTC
+    serirlization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+server:
+  port: 8081
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+
+
